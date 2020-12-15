@@ -13,11 +13,18 @@ let root = new Vue({
   methods: {
     // Funzione per il click sul next
       goAhead() {
+        if (this.posizione === this.images.length - 1) {
+          this.posizione = 0;
+        }else {
+          this.posizione++;
+        }
+      },
 
-        if (this.posizione == 3) {
-          this.posizione = 0
-        } else if (this.posizione !== 3){
-          this.posizione++
+      goBack(){
+        if (this.posizione === 0) {
+          this.posizione = this.images.length - 1;
+        } else {
+          this.posizione--;
         }
       }
   }
