@@ -13,8 +13,12 @@ let root = new Vue({
   methods: {
     // Funzione per il click sul next
       goAhead() {
-        this.posizione++
+
+        if (this.posizione == 3) {
+          this.posizione = 0
+        } else if (this.posizione !== 3){
+          this.posizione++
+        }
       }
   }
-
 });
