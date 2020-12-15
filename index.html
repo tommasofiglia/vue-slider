@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Introduzione a VueJS</title>
   </head>
   <body>
 
-    <div id="app">
-
+    <div id="root">
+      <div class="container">
+          <div class="slider-wrapper">
+              <div class="prev">
+                  <i class="fas fa-angle-left"></i>
+              </div>
+              <div class="images">
+                <img class="active" :src = "images[posizione]">
+              </div>
+              <div class="next" v-on:click = "goAhead">
+                  <i class="fas fa-angle-right"></i>
+              </div>
+              <div class="nav">
+                  <i class="fas fa-circle active first"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle last"></i>
+              </div>
+          </div>
+      </div>
     </div>
 
   <!-- Script vueJS -->
