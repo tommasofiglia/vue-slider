@@ -10,6 +10,9 @@ let root = new Vue({
     ],
     posizione: 0
   },
+  created: function () {
+    setInterval(this.goAhead, 3000)
+  },
   methods: {
     // Funzione per il click sul next
       goAhead() {
